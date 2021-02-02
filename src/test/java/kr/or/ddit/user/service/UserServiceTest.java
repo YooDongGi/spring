@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -50,22 +51,13 @@ public class UserServiceTest extends ModelTestConfig{
 		PageVo page = new PageVo(2, 5);
 		
 		/***When***/
-		List<UserVo> userList = userService.selectPagingUser(page);
+		Map<String , Object> map = userService.selectPagingUser(page);
+		List<UserVo> userList = (List<UserVo>) map.get("userList");
 		
 		/***Then***/
 		assertEquals(5, userList.size());
 	}
 	
-	@Test
-	public void selectAllUserCntTest() {
-		/***Given***/
-
-		/***When***/
-		int userCnt = userService.selectAllUserCnt();
-
-		/***Then***/
-		assertEquals(19,userCnt);
-	}
 	@Test
 	public void modifyUserTest() {
 		/***Given***/

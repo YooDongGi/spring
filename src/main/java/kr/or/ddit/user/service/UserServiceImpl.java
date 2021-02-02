@@ -1,6 +1,8 @@
 package kr.or.ddit.user.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -38,13 +40,14 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<UserVo> selectPagingUser(PageVo vo) {
-		return userDao.selectPagingUser(vo);
-	}
-
-	@Override
-	public int selectAllUserCnt() {
-		return userDao.selectAllUserCnt();
+	public Map<String, Object> selectPagingUser(PageVo vo) {
+		Map<String , Object> map = new HashMap<String, Object>();
+		
+		map.put("pageVo", vo);
+		map.put("userList", userDao.selectPagingUser(vo));
+		map.put("pagination", (int)Math.ceil( (double)userDao.selectAllUserCnt() / vo.getPageSize()) );
+		
+		return map;
 	}
 
 	@Override

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,6 +53,10 @@
 		
 		// html 문서 로딩이 완료된 후 실행되는 코드
 		$(function(){
+			<c:if test="${msg != null }">
+				alert("${msg}");
+			</c:if>
+			
 			// userid, rememberme 쿠키를 확인하여 존재할 경우 값 설정, 체크
 			if (Cookies.get("rememberme") != undefined) {
 				$("#rememberme").prop("checked", true);	
