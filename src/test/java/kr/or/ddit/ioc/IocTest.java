@@ -12,7 +12,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import kr.or.ddit.user.service.UserService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:/kr/or/ddit/ioc/ioc.xml")
+@ContextConfiguration(locations = { 
+		"classpath:/kr/or/ddit/config/spring/datasource-context.xml",
+		"classpath:/kr/or/ddit/ioc/ioc.xml" })
 public class IocTest {
 
 	

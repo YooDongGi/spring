@@ -16,7 +16,6 @@ import kr.or.ddit.user.service.UserService;
 @ContextConfiguration(classes = {IocJavaConfig.class})
 @RunWith(SpringJUnit4ClassRunner.class)
 public class IocJavaConfigTest {
-
 	
 	@Resource(name="userService")
 	private UserService userService1;
