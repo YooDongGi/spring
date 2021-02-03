@@ -61,8 +61,8 @@
 						<div class="col-sm-10">
 							
 							<%-- <img src="${cp }/profile/${user.userid }.png"/> --%>
-							<a href="/profileDownload?userid=${user.userid }">
-								<img src="/profile?userid=${user.userid }"/>
+							<a href="/user/profileDownload?userid=${user.userid }">
+								<img src="/user/profile?userid=${user.userid }"/>
 							</a>
 							
 						</div>

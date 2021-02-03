@@ -75,7 +75,8 @@
 							</table>
 						</div>
 				
-						<a class="btn btn-default pull-right" href="/user/regist">사용자 등록</a>
+						<a class="btn btn-default pull-right" href="${cp }/user/regist">사용자 등록</a>
+						<a class="btn btn-default pull-right" href="${cp }/user/excelDownload">사용자 엑셀 다운로드</a>
 				
 						<div class="text-center">
 							<ul class="pagination">
