@@ -8,6 +8,8 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import kr.or.ddit.common.model.PageVo;
@@ -18,6 +20,23 @@ public class UserServiceTest extends ModelTestConfig{
 
 	@Resource(name="userService")
 	private UserService userService;
+	
+	@Before
+	public void setup() {
+		// 테스트에서 사용할 신규 사용자 추가
+		UserVo userVo = new UserVo("testUser", "테스트용", "1234", new Date(), "테스트",
+							 		"대전시 중구 중앙로79", "4층", "34940", "brown.png", "uuid-generated-filename.png");
+		
+		userService.insertUser(userVo);
+		
+		// 신규 입력  테스트를 위해 테스트 과정에서 입력된 데이터를 삭제
+		userService.deleteUser("ddit_s");
+	}
+	
+	@After
+	public void tearDown() {
+		userService.deleteUser("testUser");
+	}
 	
 	@Test
 	public void getUserTest() {
