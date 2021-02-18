@@ -14,7 +14,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 @ContextConfiguration(locations = {"classpath:/kr/or/ddit/config/spring/application-context.xml",
 								   "classpath:/kr/or/ddit/config/spring/root-context.xml",
-								   "classpath:/kr/or/ddit/config/spring/datasource-context.xml"})
+								   "classpath:/kr/or/ddit/config/spring/datasource-context_dev.xml"})
 @WebAppConfiguration			// 스프링 환경을 Web기반의 application Context로 생성
 @RunWith(SpringJUnit4ClassRunner.class)
 public class WebTestConfig {
