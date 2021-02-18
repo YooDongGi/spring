@@ -8,22 +8,22 @@ import kr.or.ddit.user.model.UserVo;
 
 public interface UserService {
 	
-	// ÀüÃ¼ »ç¿ëÀÚ Á¤º¸ Á¶È¸
+	// ì „ì²´ ì‚¬ìš©ì ì •ë³´ ì¡°íšŒ
     List<UserVo> selectAllUser();
     
-    // userid¿¡ ÇØ´çÇÏ´Â »ç¿ëÀÚ ÇÑ¸íÀÇ Á¤º¸ Á¶È¸
+    // useridì— í•´ë‹¹í•˜ëŠ” ì‚¬ìš©ì í•œëª…ì˜ ì •ë³´ ì¡°íšŒ
     UserVo selectUser(String userid);
     
-    // ÆäÀÌÁö¿¡ ¸Â´Â »ç¿ëÀÚ Á¤º¸ Á¶È¸
+    // í˜ì´ì§€ì— ë§ëŠ” ì‚¬ìš©ì ì •ë³´ ì¡°íšŒ
     Map<String, Object> selectPagingUser(PageVo vo);
     
-    // »ç¿ëÀÚ Á¤º¸ ¼öÁ¤
+    // ì‚¬ìš©ì ì •ë³´ ìˆ˜ì •
     int modifyUser(UserVo userVo);
     
-    // »ç¿ëÀÚ µî·Ï
+    // ì‚¬ìš©ì ë“±ë¡
     int insertUser(UserVo userVo);
 
-    // »ç¿ëÀÚ »èÁ¦
+    // ì‚¬ìš©ì ì‚­ì œ
     int deleteUser(String userid);
 
 }

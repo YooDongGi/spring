@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 									"classpath:/kr/or/ddit/ioc/ioc.xml" })
 public class CollectionBeanTest {
 
-	//collectionBean ½ºÇÁ¸µ ºóÀÌ Á¤»óÀûÀ¸·Î »ı¼º µÇ¾ú´ÂÁö
+	//collectionBean ìŠ¤í”„ë§ ë¹ˆì´ ì •ìƒì ìœ¼ë¡œ ìƒì„± ë˜ì—ˆëŠ”ì§€
 	@Resource(name="collectionBean")
 	private CollectionBean collectionBean;
 	
@@ -25,7 +25,7 @@ public class CollectionBeanTest {
 		assertNotNull(collectionBean.getList());
 		assertEquals(3, collectionBean.getList().size());
 		assertEquals("sally", collectionBean.getList().get(1));
-		assertEquals("ºê¶ó¿î", collectionBean.getMap().get("usernm"));
+		assertEquals("ë¸Œë¼ìš´", collectionBean.getMap().get("usernm"));
 	}
 
 }

@@ -23,7 +23,7 @@ public class MvcController {
 		return "file/view";
 	}
 	
-	// ÆÄ¶ó¹ÌÅÍ : userid, picture
+	// íŒŒë¼ë¯¸í„° : userid, picture
 	@RequestMapping("fileupload/upload")
 	public String fileupload(String userid, MultipartFile picture) {
 		

@@ -18,7 +18,7 @@ import kr.or.ddit.common.model.PageVo;
 import kr.or.ddit.test.config.ModelTestConfig;
 import kr.or.ddit.user.model.UserVo;
 
-// ½ºÇÁ¸µ È¯°æ¿¡¼­ junit ÄÚµå¸¦ ½ÇÇà ==> junit ÄÚµåµµ ½ºÇÁ¸µ ºóÀ¸·Î µî·Ï
+// ìŠ¤í”„ë§ í™˜ê²½ì—ì„œ junit ì½”ë“œë¥¼ ì‹¤í–‰ ==> junit ì½”ë“œë„ ìŠ¤í”„ë§ ë¹ˆìœ¼ë¡œ ë“±ë¡
 
 public class UserDaoTest extends ModelTestConfig{
 
@@ -30,17 +30,17 @@ public class UserDaoTest extends ModelTestConfig{
 	
 	@Before
 	public void setup() {
-		// initData.sqlÀ» ½ÇÇà : ½ºÇÁ¸µ¿¡¼­ Á¦°øÇÏ´Â ResourceDatabasePopulator
+		// initData.sqlì„ ì‹¤í–‰ : ìŠ¤í”„ë§ì—ì„œ ì œê³µí•˜ëŠ” ResourceDatabasePopulator
 		ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
 		
-		// populator¸¦ ÅëÇØ ½ÇÇà½ÃÅ³ sql ÆÄÀÏÀ» ÁöÁ¤
+		// populatorë¥¼ í†µí•´ ì‹¤í–‰ì‹œí‚¬ sql íŒŒì¼ì„ ì§€ì •
 		populator.addScript(new ClassPathResource("/kr/or/ddit/config/db/initData.sql"));
 		
-		// script ÆÄÀÏÀ» ½ÇÇàÇÏ´Ù ¿¡·¯°¡ ¹ß»ıÇÒ °æ¿ì 
-		// ´õÀÌ»ó ÁøÇàÇÏÁö ¾Ê°í ¸ØÃß°Ô ¼³Á¤
+		// script íŒŒì¼ì„ ì‹¤í–‰í•˜ë‹¤ ì—ëŸ¬ê°€ ë°œìƒí•  ê²½ìš° 
+		// ë”ì´ìƒ ì§„í–‰í•˜ì§€ ì•Šê³  ë©ˆì¶”ê²Œ ì„¤ì •
 		populator.setContinueOnError(false);
 		
-		// populator¸¦ ½ÇÇà
+		// populatorë¥¼ ì‹¤í–‰
 		DatabasePopulatorUtils.execute(populator, dataSource);
 	}
 	
@@ -54,10 +54,10 @@ public class UserDaoTest extends ModelTestConfig{
 		UserVo userVo = userDao.selectUser(userid);
 
 		/***Then***/
-		assertEquals("ºê¶ó¿î", userVo.getUsernm());
+		assertEquals("ë¸Œë¼ìš´", userVo.getUsernm());
 	}
 
-	// ÀüÃ¼ »ç¿ëÀÚ Á¶È¸ Å×½ºÆ®
+	// ì „ì²´ ì‚¬ìš©ì ì¡°íšŒ í…ŒìŠ¤íŠ¸
 	@Test
 	public void selectAllUserTest() {
 		/***Given***/
@@ -69,7 +69,7 @@ public class UserDaoTest extends ModelTestConfig{
 		assertEquals(16, userList.size());
 	}
 	
-	// ÆäÀÌÂ¡ Ã³¸®ÇÏ¿© »ç¿ëÀÚ Á¤º¸ Á¶È¸
+	// í˜ì´ì§• ì²˜ë¦¬í•˜ì—¬ ì‚¬ìš©ì ì •ë³´ ì¡°íšŒ
 	@Test
 	public void selectPagingUserTest() {
 		
@@ -96,7 +96,7 @@ public class UserDaoTest extends ModelTestConfig{
 	@Test
 	public void modifyUserTest() {
 		/***Given***/
-		UserVo userVo = new UserVo("ddit","´ë´öÀÎÀç", "dditPass", new Date(),	"°³¹ß¿øn", "´ëÀü½Ã Áß±¸ Áß¾Ó·Î79", "4Ãş", "34940", "brown.png", "uuid-generated-filename.png");
+		UserVo userVo = new UserVo("ddit","ëŒ€ë•ì¸ì¬", "dditPass", new Date(),	"ê°œë°œì›n", "ëŒ€ì „ì‹œ ì¤‘êµ¬ ì¤‘ì•™ë¡œ79", "4ì¸µ", "34940", "brown.png", "uuid-generated-filename.png");
 		
 		/***When***/
 		int updateCnt = userDao.modifyUser(userVo);
@@ -108,8 +108,8 @@ public class UserDaoTest extends ModelTestConfig{
 	@Test
 	public void registUserTest() {
 		/***Given***/
-		UserVo userVo = new UserVo("ddit_n", "´ë´öÀÎÀç", "dditPass", new Date(), 
-										"°³¹ß¿ø_m", "´ëÀü½Ã Áß±¸ Áß¾Ó·Î79", "4Ãş", "34940", "brown.png", "uuid-generated-filename.png");
+		UserVo userVo = new UserVo("ddit_n", "ëŒ€ë•ì¸ì¬", "dditPass", new Date(), 
+										"ê°œë°œì›_m", "ëŒ€ì „ì‹œ ì¤‘êµ¬ ì¤‘ì•™ë¡œ79", "4ì¸µ", "34940", "brown.png", "uuid-generated-filename.png");
 
 		/***When***/
 		int insertCnt = userDao.insertUser(userVo);

@@ -29,16 +29,16 @@ public class ExcelDownloadView extends AbstractView{
 		List<String> header = (List<String>) model.get("header");
 		List<UserVo> data = (List<UserVo>)model.get("data");
 		
-		// excel ÆÄÀÏ »ı¼º
+		// excel é¢‡è€ ç§¯å·±
 		XSSFWorkbook book = new XSSFWorkbook();
-		// ½ÃÆ® »ı¼º
+		// çŸ«é£˜ ç§¯å·±
 		Sheet sheet = book.createSheet("users");
 		
 		int rownum = 0;
 		int colnum = 0;
-		// Çà »ı¼º
+		// é’ ç§¯å·±
 		Row row = sheet.createRow(rownum++);
-		// ÄÃ·³¿¡ header °ª ³Ö±â
+		// æ‹¿çƒ¦ä¿Š header è”¼ æŒæ‰
 		for(String h : header) {
 			Cell cell = row.createCell(colnum++);
 			cell.setCellValue(h);

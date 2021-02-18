@@ -26,17 +26,17 @@ public class YogurtProcessor implements ItemProcessor<CycleVo, List<DailyVo>>{
 	//					   cid-1, pid-100, dt-20210215, cnt-1
 	//					   cid-1, pid-100, dt-20210222, cnt-1
 	
-	// 1ÀÏ ~ 28ÀÏ loop
-	// if(¿äÀÏ ==> item.¿äÀÏ°ú °°ÀºÁö Ã¼Å©) 
-	//		ÇØ´ç ÀÏÀÚ·Î ÀÏ½ÃÀû µ¥ÀÌÅÍ¸¦ »ı¼º
+	// 1ì¼ ~ 28ì¼ loop
+	// if(ìš”ì¼ ==> item.ìš”ì¼ê³¼ ê°™ì€ì§€ ì²´í¬) 
+	//		í•´ë‹¹ ì¼ìë¡œ ì¼ì‹œì  ë°ì´í„°ë¥¼ ìƒì„±
 	
-	// ÇØ´ç³â¿ùÀÇ ¸¶Áö¸· ³¯Â¥ (date)
-	// ÇØ´ç³â¿ùÀÇ Ã¹¹øÂ° ³¯Â¥ (date)
+	// í•´ë‹¹ë…„ì›”ì˜ ë§ˆì§€ë§‰ ë‚ ì§œ (date)
+	// í•´ë‹¹ë…„ì›”ì˜ ì²«ë²ˆì§¸ ë‚ ì§œ (date)
 	
 	@Override
 	public List<DailyVo> process(CycleVo item) throws Exception {
 		
-		// ÇöÀç ³¯Â¥ ½Ã°£
+		// í˜„ì¬ ë‚ ì§œ ì‹œê°„
 		Calendar calendar = Calendar.getInstance(); 
 		calendar.setTime(dt);
 		calendar.set(Calendar.DAY_OF_MONTH , calendar.getActualMaximum(Calendar.DAY_OF_MONTH));

@@ -3,22 +3,22 @@ SELECT * FROM PRD_DOES_NOT_EXISTS_TABLE;
 DELETE users;
 
 
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('cony','ƒ⁄¥œ','conyPass',to_date('20/10/21','YY/MM/DD'),'≈‰≥¢',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('sally','ª¯∏Æ','sallyPass',to_date('20/10/21','YY/MM/DD'),'∫¥æ∆∏Æ',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('james','¡¶¿”Ω∫','jamesPass',to_date('20/10/21','YY/MM/DD'),'ªÁ∂˜',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('moon','πÆ','moonPass',null,'¥ﬁ',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('leonard','∑π≥ µÂ','leonardPass',to_date('20/10/15','YY/MM/DD'),'∞≥±∏∏Æ',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('edward','ø°µÂøˆµÂ','edwardPass',to_date('20/10/15','YY/MM/DD'),'æ÷π˙∑π',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('jessica','¡¶Ω√ƒ´','jessicaPass',to_date('20/10/15','YY/MM/DD'),'∞ÌæÁ¿Ã',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('boss','∫∏Ω∫','bossPass',to_date('20/10/15','YY/MM/DD'),'ªÁ∂˜123',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('choco','√ ƒ⁄','chocoPass',to_date('20/10/15','YY/MM/DD'),'∞ı2',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('pangyo','∆Œø‰','pangyoPass',to_date('20/10/15','YY/MM/DD'),'∆«¥Ÿ',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('muzi','π´¡ˆ','muziPass',to_date('20/10/15','YY/MM/DD'),'≈‰≥¢',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('con','ƒ‹','conPass',to_date('20/10/15','YY/MM/DD'),'æ«æÓ',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('apeach','æÓ««ƒ°','apeachPass',to_date('20/10/15','YY/MM/DD'),'∫πº˛æ∆',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('ryan','∂Û¿Ãæ ','ryanPass',to_date('20/10/15','YY/MM/DD'),'ªÁ¿⁄',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('brown','∫Í∂ÛøÓ','brownPass',to_date('20/10/21','YY/MM/DD'),'∞ıµπ2',null,null,null,null,null);
-Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('ddit','¥Î¥ˆ¿Œ¿Á','dditPass',to_date('21/02/02','YY/MM/DD'),'∞≥πﬂø¯','¥Î¿¸Ω√ ¡ﬂ±∏ ¡ﬂæ”∑Œ79','4√˛','34940',null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('cony','ÏΩîÎãà','conyPass',to_date('20/10/21','YY/MM/DD'),'ÌÜ†ÎÅº',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('sally','ÏÉêÎ¶¨','sallyPass',to_date('20/10/21','YY/MM/DD'),'Î≥ëÏïÑÎ¶¨',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('james','Ï†úÏûÑÏä§','jamesPass',to_date('20/10/21','YY/MM/DD'),'ÏÇ¨Îûå',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('moon','Î¨∏','moonPass',null,'Îã¨',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('leonard','Î†àÎÑàÎìú','leonardPass',to_date('20/10/15','YY/MM/DD'),'Í∞úÍµ¨Î¶¨',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('edward','ÏóêÎìúÏõåÎìú','edwardPass',to_date('20/10/15','YY/MM/DD'),'Ïï†Î≤åÎ†à',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('jessica','Ï†úÏãúÏπ¥','jessicaPass',to_date('20/10/15','YY/MM/DD'),'Í≥†ÏñëÏù¥',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('boss','Î≥¥Ïä§','bossPass',to_date('20/10/15','YY/MM/DD'),'ÏÇ¨Îûå123',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('choco','Ï¥àÏΩî','chocoPass',to_date('20/10/15','YY/MM/DD'),'Í≥∞2',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('pangyo','Ìå°Ïöî','pangyoPass',to_date('20/10/15','YY/MM/DD'),'ÌåêÎã§',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('muzi','Î¨¥ÏßÄ','muziPass',to_date('20/10/15','YY/MM/DD'),'ÌÜ†ÎÅº',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('con','ÏΩò','conPass',to_date('20/10/15','YY/MM/DD'),'ÏïÖÏñ¥',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('apeach','Ïñ¥ÌîºÏπò','apeachPass',to_date('20/10/15','YY/MM/DD'),'Î≥µÏà≠ÏïÑ',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('ryan','ÎùºÏù¥Ïñ∏ ','ryanPass',to_date('20/10/15','YY/MM/DD'),'ÏÇ¨Ïûê',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('brown','Î∏åÎùºÏö¥','brownPass',to_date('20/10/21','YY/MM/DD'),'Í≥∞Îèå2',null,null,null,null,null);
+Insert into USERS (USERID,USERNM,PASS,REG_DT,ALIAS,ADDR1,ADDR2,ZIPCODE,FILENAME,REALFILENAME) values ('ddit','ÎåÄÎçïÏù∏Ïû¨','dditPass',to_date('21/02/02','YY/MM/DD'),'Í∞úÎ∞úÏõê','ÎåÄÏ†ÑÏãú Ï§ëÍµ¨ Ï§ëÏïôÎ°ú79','4Ï∏µ','34940',null,null);
 
 
 COMMIT;

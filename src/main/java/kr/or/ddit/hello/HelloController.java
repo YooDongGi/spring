@@ -61,7 +61,7 @@ public class HelloController {
 	public String pathVariable(@PathVariable("subpath") String subpath, Model model,
 								@RequestHeader(name = "User-Agent") String userAgent) {
 		
-		//User-Agent logger·Î Ãâ·Â
+		//User-Agent loggerë¡œ ì¶œë ¥
 		logger.debug("userAgent : {}", userAgent);
 		
 		model.addAttribute("subpath", subpath);

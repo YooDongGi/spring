@@ -23,13 +23,13 @@ public class UserServiceTest extends ModelTestConfig{
 	
 	@Before
 	public void setup() {
-		// Å×½ºÆ®¿¡¼­ »ç¿ëÇÒ ½Å±Ô »ç¿ëÀÚ Ãß°¡
-		UserVo userVo = new UserVo("testUser", "Å×½ºÆ®¿ë", "1234", new Date(), "Å×½ºÆ®",
-							 		"´ëÀü½Ã Áß±¸ Áß¾Ó·Î79", "4Ãş", "34940", "brown.png", "uuid-generated-filename.png");
+		// í…ŒìŠ¤íŠ¸ì—ì„œ ì‚¬ìš©í•  ì‹ ê·œ ì‚¬ìš©ì ì¶”ê°€
+		UserVo userVo = new UserVo("testUser", "í…ŒìŠ¤íŠ¸ìš©", "1234", new Date(), "í…ŒìŠ¤íŠ¸",
+							 		"ëŒ€ì „ì‹œ ì¤‘êµ¬ ì¤‘ì•™ë¡œ79", "4ì¸µ", "34940", "brown.png", "uuid-generated-filename.png");
 		
 		userService.insertUser(userVo);
 		
-		// ½Å±Ô ÀÔ·Â  Å×½ºÆ®¸¦ À§ÇØ Å×½ºÆ® °úÁ¤¿¡¼­ ÀÔ·ÂµÈ µ¥ÀÌÅÍ¸¦ »èÁ¦
+		// ì‹ ê·œ ì…ë ¥  í…ŒìŠ¤íŠ¸ë¥¼ ìœ„í•´ í…ŒìŠ¤íŠ¸ ê³¼ì •ì—ì„œ ì…ë ¥ëœ ë°ì´í„°ë¥¼ ì‚­ì œ
 		userService.deleteUser("ddit_s");
 	}
 	
@@ -47,10 +47,10 @@ public class UserServiceTest extends ModelTestConfig{
 		UserVo userVo = userService.selectUser(userid);
 
 		/***Then***/
-		assertEquals("ºê¶ó¿î", userVo.getUsernm());
+		assertEquals("ë¸Œë¼ìš´", userVo.getUsernm());
 	}
 
-	// ÀüÃ¼ »ç¿ëÀÚ Á¶È¸ Å×½ºÆ®
+	// ì „ì²´ ì‚¬ìš©ì ì¡°íšŒ í…ŒìŠ¤íŠ¸
 	@Test
 	public void selectAllUserTest() {
 		/***Given***/
@@ -62,7 +62,7 @@ public class UserServiceTest extends ModelTestConfig{
 		assertEquals(20, userList.size());
 	}
 	
-	// ÆäÀÌÂ¡ Ã³¸®ÇÏ¿© »ç¿ëÀÚ Á¤º¸ Á¶È¸
+	// í˜ì´ì§• ì²˜ë¦¬í•˜ì—¬ ì‚¬ìš©ì ì •ë³´ ì¡°íšŒ
 	@Test
 	public void selectPagingUserTest() {
 		
@@ -80,7 +80,7 @@ public class UserServiceTest extends ModelTestConfig{
 	@Test
 	public void modifyUserTest() {
 		/***Given***/
-		UserVo userVo = new UserVo("ddit","´ë´öÀÎÀç", "dditPass", new Date(),	"°³¹ß¿øn", "´ëÀü½Ã Áß±¸ Áß¾Ó·Î79", "4Ãş", "34940", "brown.png", "uuid-generated-filename.png");
+		UserVo userVo = new UserVo("ddit","ëŒ€ë•ì¸ì¬", "dditPass", new Date(),	"ê°œë°œì›n", "ëŒ€ì „ì‹œ ì¤‘êµ¬ ì¤‘ì•™ë¡œ79", "4ì¸µ", "34940", "brown.png", "uuid-generated-filename.png");
 		
 		/***When***/
 		int updateCnt = userService.modifyUser(userVo);
@@ -92,8 +92,8 @@ public class UserServiceTest extends ModelTestConfig{
 	@Test
 	public void registUserTest() {
 		/***Given***/
-		UserVo userVo = new UserVo("ddit_s", "´ë´öÀÎÀç", "dditPass", new Date(), 
-										"°³¹ß¿ø_m", "´ëÀü½Ã Áß±¸ Áß¾Ó·Î79", "4Ãş", "34940", "brown.png", "uuid-generated-filename.png");
+		UserVo userVo = new UserVo("ddit_s", "ëŒ€ë•ì¸ì¬", "dditPass", new Date(), 
+										"ê°œë°œì›_m", "ëŒ€ì „ì‹œ ì¤‘êµ¬ ì¤‘ì•™ë¡œ79", "4ì¸µ", "34940", "brown.png", "uuid-generated-filename.png");
 
 		/***When***/
 		int insertCnt = userService.insertUser(userVo);

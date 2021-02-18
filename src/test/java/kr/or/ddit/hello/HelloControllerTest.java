@@ -19,10 +19,10 @@ public class HelloControllerTest extends WebTestConfig {
 
 	//@Resource(name="helloController")
 	
-	// ½ºÇÁ¸µ ºó Áß¿¡ ´ëÀÔ °¡´ÉÇÑ Å¸ÀÔÀÇ ½ºÇÁ¸µ ºóÀ» ÁÖÀÔÇÑ´Ù
-	// ¸¸¾à µ¿ÀÏÇÑ Å¸ÀÔÀÇ ½ºÇÁ¸µ ºóÀÌ ¿©·¯°³ ÀÖÀ» °æ¿ì @Qulifier ¾î³ëÅ×ÀÌ¼ÇÀ» ÅëÇØ
-	// Æ¯Á¤ ½ºÇÁ¸µ ºóÀÇ ÀÌ¸§À» ÁöÄªÇÒ ¼ö ÀÖ´Ù
-	//		==> Resource ¾î³ëÅ×ÀÌ¼Ç ÇÏ³ª¸¦ »ç¿ëÇßÀ» ¶§¿Í µ¿ÀÏ
+	// ìŠ¤í”„ë§ ë¹ˆ ì¤‘ì— ëŒ€ì… ê°€ëŠ¥í•œ íƒ€ì…ì˜ ìŠ¤í”„ë§ ë¹ˆì„ ì£¼ì…í•œë‹¤
+	// ë§Œì•½ ë™ì¼í•œ íƒ€ì…ì˜ ìŠ¤í”„ë§ ë¹ˆì´ ì—¬ëŸ¬ê°œ ìˆì„ ê²½ìš° @Qulifier ì–´ë…¸í…Œì´ì…˜ì„ í†µí•´
+	// íŠ¹ì • ìŠ¤í”„ë§ ë¹ˆì˜ ì´ë¦„ì„ ì§€ì¹­í•  ìˆ˜ ìˆë‹¤
+	//		==> Resource ì–´ë…¸í…Œì´ì…˜ í•˜ë‚˜ë¥¼ ì‚¬ìš©í–ˆì„ ë•Œì™€ ë™ì¼
 	
 	@Test
 	public void viewTest() throws Exception {
@@ -38,7 +38,7 @@ public class HelloControllerTest extends WebTestConfig {
 		assertEquals("hello", mav.getViewName());
 		
 		UserVo userVo = (UserVo)mav.getModel().get("userVo");
-		assertEquals("ºê¶ó¿î", userVo.getUsernm());
+		assertEquals("ë¸Œë¼ìš´", userVo.getUsernm());
 	}
 
 	@Test

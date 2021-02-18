@@ -86,11 +86,11 @@ public class UserController {
 		
 		model.addAllAttributes(userService.selectPagingUser(pageVo));
 		
-		// tiles-definition¿¡ ¼³Á¤ÇÑ name
+		// tiles-definitionì— ì„¤ì •í•œ name
 		return "tiles.user.pagingUser";
 	}
 	
-	// »ç¿ëÀÚ ¸®½ºÆ®°¡ ¾ø´Â »óÅÂÀÇ È­¸é¸¸ ÀÀ´äÀ¸·Î »ı¼º
+	// ì‚¬ìš©ì ë¦¬ìŠ¤íŠ¸ê°€ ì—†ëŠ” ìƒíƒœì˜ í™”ë©´ë§Œ ì‘ë‹µìœ¼ë¡œ ìƒì„±
 	@RequestMapping("pagingUserAjaxView")
 	public String pagingUserAjaxView() {
 		return "tiles.user.pagingUserAjax";
@@ -153,14 +153,14 @@ public class UserController {
 	public String registTiles() {
 		return "tiles.user.userRegist";
 	}
-	// bindingResult °´Ã¼´Â command °´Ã¼ ¹Ù·Î µÚ¿¡ ÀÎÀÚ·Î ±â¼úÇØ¾ß ÇÑ´Ù
+	// bindingResult ê°ì²´ëŠ” command ê°ì²´ ë°”ë¡œ ë’¤ì— ì¸ìë¡œ ê¸°ìˆ í•´ì•¼ í•œë‹¤
 	@RequestMapping(path="regist", method = RequestMethod.POST)
 	public String regist(@Valid UserVo userVo, BindingResult result ,Model model,MultipartFile profile) {
 		
-		//							  °ËÁõÇÒ ´ë»ó, ¿¡·¯ 
+		//							  ê²€ì¦í•  ëŒ€ìƒ, ì—ëŸ¬ 
 		//new UserVoValidator().validate(userVo, result);
 		
-		// ¿¡·¯°¡ ÀÖ´ÂÁö È®ÀÎ ÈÄ ÀÖÀ¸¸é µî·Ï ÆäÀÌÁö·Î Æ÷¿öµå
+		// ì—ëŸ¬ê°€ ìˆëŠ”ì§€ í™•ì¸ í›„ ìˆìœ¼ë©´ ë“±ë¡ í˜ì´ì§€ë¡œ í¬ì›Œë“œ
 		if(result.hasErrors()) {
 			logger.debug("result has error");
 			return "user/userRegist";
@@ -259,9 +259,9 @@ public class UserController {
 	public String excelDownload(Model model) {
 		
 		List<String> header = new ArrayList<String>();
-		header.add("»ç¿ëÀÚ ¾ÆÀÌµğ");
-		header.add("»ç¿ëÀÚ ÀÌ¸§");
-		header.add("»ç¿ëÀÚ º°¸í");
+		header.add("ì‚¬ìš©ì ì•„ì´ë””");
+		header.add("ì‚¬ìš©ì ì´ë¦„");
+		header.add("ì‚¬ìš©ì ë³„ëª…");
 		
 		model.addAttribute("header", header);
 		model.addAttribute("data", userService.selectAllUser());
@@ -278,7 +278,7 @@ public class UserController {
 		
 		String path = "";
 		if(userVo.getRealfilename() == null) {		
-			// DB¿¡ »çÁøÀÌ µî·ÏµÇÁö¾Ê¾ÒÀ» °æ¿ì image¿¡ ÀÖ´Â unknown.png·Î º¸¿©ÁØ´Ù
+			// DBì— ì‚¬ì§„ì´ ë“±ë¡ë˜ì§€ì•Šì•˜ì„ ê²½ìš° imageì— ìˆëŠ” unknown.pngë¡œ ë³´ì—¬ì¤€ë‹¤
 			path = req.getServletContext().getRealPath("/image/unknown.png");
 		} else {
 			path = userVo.getRealfilename();

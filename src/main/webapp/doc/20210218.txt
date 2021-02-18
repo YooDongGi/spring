@@ -1,4 +1,4 @@
---table space »ı¼º
+--table space ìƒì„±
 SELECT *
 FROM DBA_DATA_FILES;
 
@@ -8,7 +8,7 @@ SIZE 100M
 AUTOEXTEND ON;
 
 
---»ç¿ëÀÚ Ãß°¡
+--ì‚¬ìš©ì ì¶”ê°€
 create user PCXX identified by java
 default tablespace TS_DBSQL
 temporary tablespace temp
@@ -16,17 +16,17 @@ quota unlimited on TS_DBSQL
 quota 0m on system;
 
 
---Á¢¼Ó, »ı¼º±ÇÇÑ
+--ì ‘ì†, ìƒì„±ê¶Œí•œ
 GRANT CONNECT, RESOURCE TO PCXX;
 -----------------------------------------------------------
 
-°³¹ßÀÚ¿ë ( º»ÀÎ ) Å×½ºÆ® µğºñ
+ê°œë°œììš© ( ë³¸ì¸ ) í…ŒìŠ¤íŠ¸ ë””ë¹„
 
-Å×½ºÆ® ÄÚµå ½ÇÇàÀü
+í…ŒìŠ¤íŠ¸ ì½”ë“œ ì‹¤í–‰ì „
 
-users Å×ÀÌºíÀÇ ¸ğµç µ¥ÀÌÅÍ¸¦ »èÁ¦
+users í…Œì´ë¸”ì˜ ëª¨ë“  ë°ì´í„°ë¥¼ ì‚­ì œ
 DELETE users;
 
-users Å×ÀÌºíÀÇ ¿øº» µ¥ÀÌÅÍ(17°Ç)¸¦ ÀÔ·ÂÇÏ´Â insert Äõ¸®¸¦ ½ÇÇà
+users í…Œì´ë¸”ì˜ ì›ë³¸ ë°ì´í„°(17ê±´)ë¥¼ ì…ë ¥í•˜ëŠ” insert ì¿¼ë¦¬ë¥¼ ì‹¤í–‰
 
 commit
